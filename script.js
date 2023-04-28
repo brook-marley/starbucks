@@ -21,7 +21,7 @@ function myFunction() {
 //---------------------------------------------------------------------------------------
 
 function heart() {
-  document.getElementById("heart").style.Color = #e60605;
+  document.getElementById("heart").style.Color = red;
 
   console.log("heart")
 }
@@ -35,13 +35,20 @@ function heart() {
     const tempObject =
     {
         emailOrUsername: emailAddress,
-        pass: password
+        pass: password 
     }
 
     db.push(tempObject);
 
     for (let k in db) {
         console.log(db[k]);
+    }
+
+    if (tempObject.emailAddress == NewUser) {
+        alert("welcome");
+    }
+    else{
+        alert ("user already exists ")
     }
 }
 
